@@ -12,21 +12,6 @@ cache:
 
 matrix:
   include:
-    - env: CLANG_VERSION=3.4 BUILD_TYPE=Debug CPP=1y ASAN=On LIBCXX=On
-      os: linux
-      addons: &clang34
-        apt:
-          packages:
-            - util-linux
-            - clang-3.4
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.4
-
-    - env: CLANG_VERSION=3.4 BUILD_TYPE=Release CPP=1y ASAN=On LIBCXX=On
-      os: linux
-      addons: *clang34
-
     - env: CLANG_VERSION=3.7 BUILD_TYPE=Debug CPP=14 ASAN=Off LIBCXX=On
       os: linux
       addons: &clang37
